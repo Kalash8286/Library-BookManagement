@@ -1,0 +1,28 @@
+<div class="container">
+
+    <h3 class="text-center my-4 text-primary" >Add User</h3>
+    <form (ngSubmit)="onFormSubmit()">
+        <div [ngStyle]="{'color': showMsgColor}" *ngIf="showMsg;"> {{ showMsg }} </div>
+        <div class="col-sm-6 mt-3" >
+            <label for="userName">Enter Name </label>
+            <input [(ngModel)]="user.name" class="form-control" type="text" id="userName" name="userName"
+                placeholder="Name" />
+        </div>
+
+        <div class="col-sm-6 mt-3">
+            <label for="userCity">Enter City </label>
+            <input [(ngModel)]="user.city" class="form-control" type="text" id="userCity" name="userCity"
+                placeholder="City" />
+        </div>
+
+        <div class="col-sm-6 mt-3">
+            <label for="userEmail">Email</label>
+            <input [(ngModel)]="user.email" class="form-control" type="text" id="userEmail" name="userEmail"
+                placeholder="Email" />
+        </div>
+
+
+        <button type="submit" class="btn btn-success mt-5 col-sm-3"> Submit </button>
+
+    </form>
+</div>

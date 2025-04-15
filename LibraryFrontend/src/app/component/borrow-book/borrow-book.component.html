@@ -1,0 +1,38 @@
+<div class="container">
+
+    <h3 class="text-center mt-4 text-primary">Borrow Book</h3>
+    <!-- <form (ngSubmit)="onFormSubmit()"> -->
+    <!-- <div [ngStyle]="{'color': showMsgColor}" *ngIf="showMsg;"> {{ showMsg }} </div> -->
+    <div class="row">
+        <div class="col-sm-4">
+            <label for="bookTitle">Book Title </label>
+            <input [(ngModel)]="book.title" class="form-control" type="text" id="bookTitle" name="bookTitle" readonly
+                placeholder="Book Title" />
+        </div>
+
+        <div class="col-sm-4">
+            <label for="bookAuthor">Book Author </label>
+            <input [(ngModel)]="book.author" class="form-control" type="text" id="bookAuthor" name="bookAuthor" readonly
+                placeholder="Book Author" />
+        </div>
+
+        <div class="col-sm-4">
+            <label for="bookDescription">Book Description </label>
+            <input [(ngModel)]="book.description" class="form-control" type="text" id="bookDescription"
+                name="bookDescription" readonly placeholder="Book Description" />
+        </div>
+
+        <div class="col-sm-6 mt-3">
+            <label for="userEmail">User Email </label>
+            <input [(ngModel)]="borrowBook.email" class="form-control" type="text" id="userEmail" name="userEmail"
+                placeholder="User Email" />
+        </div>
+        <div class="col-sm-6 mt-3">
+            <div style="color: red;" *ngIf="book.showMsg;"> {{ book.showMsg }} </div>
+        </div>
+
+    </div>
+    <button type="submit" (click)="callBorrowBook()" class="btn btn-success mt-5 col-sm-3"> Submit </button>
+
+    <!-- </form> -->
+</div>

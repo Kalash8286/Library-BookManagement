@@ -1,0 +1,19 @@
+<div class="container">
+
+    <h3 class="text-center mt-4 text-primary">All Users</h3>
+    <div> {{showMsg}} </div>
+    <table class="table my-3">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Email</th>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td> {{ user.id}} </td>
+            <td> {{user.name | titlecase}} </td>
+            <td> {{ user.city | titlecase}} </td>
+            <td> {{user.email}} </td>
+        </tr>
+    </table>
+</div>
